@@ -569,6 +569,10 @@ section .descr_wrap .section_descr:after {
     display: inline-block;
     cursor: pointer;
     outline: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .portfolio_header {
@@ -656,7 +660,7 @@ section .descr_wrap .section_descr:after {
     background-color: #FAFAFA;
     max-width: 800px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding: 37px;
     text-align: center;
 }
 
