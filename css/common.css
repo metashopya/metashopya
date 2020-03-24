@@ -368,7 +368,7 @@ section .descr_wrap .section_descr:after {
     color: #F54400;
 }
 
-.section_about .section_content p:nth-child(5) {
+.section_about .section_content p:nth-last-child(1) {
     color: #F54400;
 }
 
@@ -515,11 +515,16 @@ section .descr_wrap .section_descr:after {
 
 .section_portfolio .portfolio_block {
     padding: 0;
+    height: 136px;
+    overflow: hidden;
 }
 
 .section_portfolio .portfolio_block .portfolio_item {
     padding: 0;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .section_portfolio .portfolio_block .portfolio_item img {
