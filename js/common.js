@@ -8,7 +8,7 @@ $(document).ready(function() {
     $(window).resize(function() {
         heightResize();
     });
-    for (var i = 1; i < 22; i++) {
+    for (var i = 1; i < 29; i++) {
         var block = $("#portfolio_main_item").clone().attr('id', ' ');
         block.attr('id', ' ');
         $("#portfolio_main_item").after(block);
