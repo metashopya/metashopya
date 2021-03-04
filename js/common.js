@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var imgNumber = 74;
 
     function heightResize() {
         $(".main_head").css("height", $(window).height());
@@ -8,7 +9,7 @@ $(document).ready(function() {
     $(window).resize(function() {
         heightResize();
     });
-    for (var i = 1; i < 74; i++) {
+    for (var i = 1; i < imgNumber; i++) {
         var block = $("#portfolio_main_item").clone().attr('id', ' ');
         block.attr('id', ' ');
         $("#portfolio_main_item").after(block);
@@ -55,12 +56,12 @@ $(document).ready(function() {
         midClick: true,
         mainClass: "portfolio_popup"
     });
-
+    var imgId = imgNumber + 1;
     $(".portfolio_item").each(function(i) {
-        $(this).find(".popup").attr("href", "#work_" + i);
-        $(this).find(".portfolio_description").attr("id", "work_" + i);
-        i++
-        $('img', this).attr('src', 'img/thumbs/' + i + '.jpg');
+        $(this).find(".popup").attr("href", "#work_" + imgId);
+        $(this).find(".portfolio_description").attr("id", "work_" + imgId);
+        imgId--
+        $('img', this).attr('src', 'img/thumbs/' + imgId + '.jpg');
     });
 
     $(".top_mnu ul a").mPageScroll2id();
